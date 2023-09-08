@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo Formulario</title>
+        <h1>Formulario Carga de Datos</h1>
+        <meta charset="utf-8">
+
+    </head>
+    
+    <body>
+        <form>
+            <label for="apellido"><b>Apellido</b></label>
+            <input type="text" id="apellido">
+            <label for="nombre"><b>Nombre</b></label>
+            <input type="text" id="nombre">
+            <br>
+            <br>
+            <label for="dni"><b>Número de DNI</b></label>
+            <input type="number" id="dni">
+            <label for="fecha"><b>Fecha de Nacimiento</b></label>
+            <input type="date" id="fecha">
+            <br>
+            <br>
+            <label for="dom"><b>Domicilio</b></label>
+            <input type="text" id="dom">
+            <label for="loc"><b>Localidad</b></label>
+            <input type="text" id="loc">
+            <h2><b>Idiomas que conoce</b></h2>
+            <label for="idiom"><b>Idiomas</b></label>
+            <br>
+            <label for="es"><b>Español</b></label>
+            <input type="checkbox" name="idiom" value="Español" id="es">
+            <input type="range" id="ndes">
+            <br>
+            <label for="in"><b>Ingles</b></label>
+            <input type="checkbox" name="idiom" value="Ingles" id="in">
+            <input type="range" id="ndin">
+            <br>
+            <label for="fra"><b>Frances</b></label>
+            <input type="checkbox" name="idiom" value="Frances" id="fra">
+            <input type="range" id="ndfra">
+            <br>
+            <label for="chi"><b>Chino</b></label>
+            <input type="checkbox" name="idiom" value="Chino" id="chi">
+            <input type="range" id="ndchi">
+            <input type="submit" value="Enviar" onClick="mostrarDatos() "  >
+        </form>
+        <script>
+            function mostrarDatos(){
+                vapellido = document.getElementById("apellido").value;
+                vnombre = document.getElementById("nombre").value;
+                vnum = document.getElementById("dni").value;
+                vdate = document.getElementById("fecha").value;
+                vdom = document.getElementById("dom").value;
+                vloc = document.getElementById("loc").value;
+                ves = document.getElementById("es").checked;
+                vin = document.getElementById("in").checked;
+                vfra = document.getElementById("fra").checked;
+                vchi = document.getElementById("chi").checked;
+                vranes = document.getElementById("ndes").value;
+                vranin = document.getElementById("ndin").value;
+                vranfra = document.getElementById("ndfra").value;
+                vranchi = document.getElementById("ndchi").value,
+
+                
+
+                document.write("Los datos ingresados fueron: <br/>");
+                document.write("Apellido:" +vapellido+"<br/>");
+                document.write("Nombre:" +vnombre+"<br/>");
+                document.write("Dni:" +vnum+"<br/>");
+                document.write("Fecha de nacimiento:" +vdate+"<br/>");
+                document.write("Domicilio:" +vdom+"<br/>");
+                document.write("Localidad:" +vloc+"<br/>");
+
+                if (ves == true){
+                    document.write("Idioma: Español <br/>")
+                    document.write("Rango:" +vranes+ "<br/>")
+                }
+                if (vin == true){
+                    document.write("Idioma: Ingles <br/>")
+                    document.write("Rango:" +vranin+ "<br/>")
+                }
+                if (vfra == true){
+                    document.write("Idioma: Frances <br/>")
+                    document.write("Idioma:" +vranfra+ "<br/>")
+                }
+                if (vchi == true){
+                    document.write("Rango: Chino <br/>")
+                    document.write("Rango:" +vranchi+ "<br/>")
+                }
+                
+
+            }
+     
+    </script>
+    </body>
+</html>
